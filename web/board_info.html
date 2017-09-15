@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h1 align="center">게시글</h1>
+<br>
+<div>
+    <form action="board_info.html" method="post">
+        <table align="center" id="board_write">
+            {{#article}}
+            <tr align="center">
+                <td width="50">작성자</td>
+                <td><input type="text" id="name" value="{{name}}"></td>
+            </tr>
+            <tr align="center">
+                <td width="50">제목</td>
+                <td><input type="text" id="title" value="{{title}}"></td>
+            </tr>
+            <tr align="center">
+                <td>내용</td>
+                <td colspan="4"><textarea cols="80" rows="20" id="content">{{content}}</textarea></td>
+            </tr>
+            {{/article}}
+        </table>
+    </form>
+    </div>
+
+    <div align="center">
+        <input type="submit" value="삭제" onclick="location.href='index.html'" id="delete">
+        <input type="submit" value="수정" onclick="location.href='index.html'" id="update">
+    </div>
+
+
+    </body>
+</html>
